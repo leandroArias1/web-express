@@ -1,0 +1,66 @@
+/* ================================
+   DESIGN SYSTEM — WEB EXPRESS
+   ================================ */
+
+:root {
+  /* ====== COLORS ====== */
+  --color-bg: #0b0f0e;                /* fondo principal (dark agresivo) */
+  --color-bg-soft: #111716;           /* secciones */
+  --color-bg-card: #141c1a;           /* cards */
+
+  --color-primary: #7CFF00;           /* verde lima protagonista */
+  --color-primary-soft: rgba(124, 255, 0, 0.15);
+  --color-primary-glow: rgba(124, 255, 0, 0.4);
+
+  --color-text-main: #e6f0ec;         /* texto principal */
+  --color-text-muted: #9aa7a3;        /* texto secundario */
+  --color-text-inverted: #0b0f0e;
+
+  --color-border: rgba(255,255,255,0.08);
+
+  /* ====== GRADIENTS ====== */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #7CFF00 0%,
+    #4dff88 100%
+  );
+
+  --gradient-dark: radial-gradient(
+    circle at top,
+    rgba(124,255,0,0.15),
+    transparent 60%
+  );
+
+  /* ====== TYPOGRAPHY ====== */
+  --font-title: 'Clash Display', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --fs-hero: clamp(2.8rem, 5vw, 4.5rem);
+  --fs-h1: clamp(2.2rem, 4vw, 3.2rem);
+  --fs-h2: clamp(1.8rem, 3vw, 2.4rem);
+  --fs-h3: 1.4rem;
+
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* ====== SPACING ====== */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* ====== RADIUS ====== */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+
+  /* ====== SHADOWS ====== */
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 40px rgba(124,255,0,0.35);
+
+  /* ====== TRANSITIONS ====== */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s ease;
+}
