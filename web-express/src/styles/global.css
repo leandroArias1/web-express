@@ -468,6 +468,96 @@ body {
   gap: var(--space-md);
 }
 
+/* ================================
+   CONTACT EXTRAS (GRID)
+   ================================ */
+
+.contact__extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0;
+}
+
+.contact__extras label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-size: 0.85rem;
+}
+
+.contact__extras label:hover {
+  border-color: rgba(124,255,0,0.4);
+  box-shadow: 0 0 15px rgba(124,255,0,0.12);
+}
+
+.contact__extras input[type="checkbox"] {
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+
+/* ================================
+   EXTRAS
+   ================================ */
+
+.extras__title {
+  font-family: var(--font-title);
+  font-size: var(--fs-h2);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.extras__subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.extras__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.extra__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  transition: var(--transition-base);
+}
+
+.extra__card h3 {
+  font-family: var(--font-title);
+  margin-bottom: 0.4rem;
+}
+
+.extra__card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.extra__card span {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.extra__card:hover {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  border-color: rgba(124,255,0,0.3);
+}
+
 
 /* ================================
    NAVBAR

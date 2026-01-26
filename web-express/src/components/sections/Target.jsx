@@ -25,7 +25,7 @@ const Target = () => {
               <li>Negocios sin página web</li>
               <li>Webs viejas o desactualizadas</li>
               <li>Profesionales y servicios</li>
-              <li>Locales que quieren más consultas</li>
+              <li>Sistemas a medida</li>
             </ul>
           </motion.div>
 
@@ -36,7 +36,6 @@ const Target = () => {
             <h3>❌ No es para</h3>
             <ul>
               <li>E-commerce complejos</li>
-              <li>Apps o sistemas a medida</li>
               <li>Proyectos con meses de desarrollo</li>
               <li>Clientes que quieren “algo barato”</li>
             </ul>

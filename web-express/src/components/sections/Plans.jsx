@@ -45,6 +45,7 @@ const Plans = () => {
               <li>SEO básico</li>
               <li>WhatsApp + formulario</li>
               <li>Entrega en 48 hs</li>
+              <li>Posibilidad de sumar módulos a medida</li>
             </ul>
             <Button href="https://wa.me/5492612113198">
               Elegir Negocio
@@ -57,9 +58,9 @@ const Plans = () => {
             <p className="plan__price">Desde $180.000 ARS</p>
             <ul>
               <li>Todo el plan Negocio</li>
+              <li>Posibilidad de sumar módulos a medida</li>
               <li>Animaciones avanzadas</li>
               <li>Copy optimizado</li>
-              <li>Soporte post-entrega</li>
             </ul>
             <Button href="https://wa.me/5492612113198">
               Elegir Pro

@@ -22,8 +22,8 @@ const Hero = () => {
           transition={{ delay: 0.2 }}
           className="hero__subtitle"
         >
-          Diseñamos webs simples, modernas y listas para que
-          tus clientes te contacten por WhatsApp.
+          Diseñamos y desarrollamos soluciones digitales rápidas, claras y sin vueltas.
+          Desde páginas web hasta sistemas de gestión internos.
         </motion.p>
 
         <motion.div

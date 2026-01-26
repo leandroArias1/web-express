@@ -1,34 +1,40 @@
 const Contact = () => {
- const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
 
-  const form = e.target;
+    const nombre = form.nombre.value;
+    const email = form.email.value;
+    const mensaje = form.mensaje.value;
 
-  const nombre = form.nombre.value;
-  const email = form.email.value;
-  const plan = form.plan.value;
-  const mensaje = form.mensaje.value;
+    const extrasSeleccionados = Array.from(
+      form.querySelectorAll('input[name="extras"]:checked')
+    ).map((extra) => `- ${extra.value}`);
 
-  const texto = `
+    const extrasTexto =
+      extrasSeleccionados.length > 0
+        ? extrasSeleccionados.join('\n')
+        : 'Ninguno';
+
+    const texto = `
 Hola! 👋
 Quiero una web.
 
 Nombre: ${nombre}
 Email: ${email}
-Plan elegido: ${plan}
+
+Extras solicitados:
+${extrasTexto}
 
 Mensaje:
 ${mensaje}
-  `;
+    `;
 
-  const textoEncoded = encodeURIComponent(texto);
-
-  window.open(
-    'https://wa.me/5492612113198?text=' + textoEncoded,
-    '_blank'
-  );
-};
-
+    window.open(
+      'https://wa.me/5492612113198?text=' + encodeURIComponent(texto),
+      '_blank'
+    );
+  };
 
   return (
     <section className="section section--soft" id="contacto">
@@ -39,50 +45,56 @@ ${mensaje}
         </p>
 
         <div className="contact__grid">
-          {/* FORM */}
           <form className="contact__form" onSubmit={handleSubmit}>
-  <input
-    type="text"
-    name="nombre"
-    placeholder="Nombre"
-    required
-  />
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="email" name="email" placeholder="Email" required />
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Email"
-    required
-  />
+            {/* EXTRAS */}
+            <div className="contact__extras">
+              <h3>Extras (opcional)</h3>
+              <label>
+                <input type="checkbox" name="extras" value="Control de stock" />
+                Stock
+              </label>
 
-  <select name="plan" required>
-    <option value="">Elegí un plan</option>
-    <option value="Landing">Express</option>
-    <option value="Web Express">Negocio</option>
-    <option value="Web Pro">Pro</option>
-    <option value="No estoy seguro">No estoy seguro</option>
-  </select>
+              <label>
+                <input type="checkbox" name="extras" value="Turnos / Reservas" />
+                Turnos
+              </label>
 
-  <textarea
-    name="mensaje"
-    placeholder="Contanos qué necesitás"
-    required
-  />
+              <label>
+                <input type="checkbox" name="extras" value="Gestión de clientes" />
+                Clientes
+              </label>
 
-  <button type="submit" className="btn btn--primary">
-    Enviar por WhatsApp
-  </button>
-</form>
+              <label>
+                <input type="checkbox" name="extras" value="Panel admin" />
+                Panel admin
+              </label>
 
-          {/* CTA */}
+              <label>
+                <input type="checkbox" name="extras" value="Integraciones" />
+                Integraciones
+              </label>
+            </div>
+
+            <textarea
+              name="mensaje"
+              placeholder="Contanos qué necesitás"
+              required
+            />
+
+            <button type="submit" className="btn btn--primary">
+              Enviar por WhatsApp
+            </button>
+          </form>
+
           <div className="contact__cta">
             <h3>¿Preferís hablar directo?</h3>
-            <p>
-              Si querés, podés escribirnos ahora mismo y lo vemos sin vueltas.
-            </p>
+            <p>Escribinos y lo vemos sin vueltas.</p>
 
             <a
-              href="https://wa.me/549XXXXXXXXXX"
+              href="https://wa.me/5492612113198"
               target="_blank"
               rel="noreferrer"
               className="btn btn--outline"

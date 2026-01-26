@@ -7,6 +7,7 @@ import Requirements from '../components/sections/Requirements'
 import FAQ from '../components/sections/FAQ'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/layout/Footer'
+import Extras from '../components/sections/Extras'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Hero />
       <Target />
       <Plans />
+      <Extras />
       <Process />
       <Requirements />
       <FAQ />
