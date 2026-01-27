@@ -5,35 +5,29 @@ const Contact = () => {
 
     const nombre = form.nombre.value;
     const email = form.email.value;
+    const plan = form.plan.value;
+
+    const extras = Array.from(
+      form.querySelectorAll('input[name="extras"]:checked')
+    ).map((e) => e.value);
+
     const mensaje = form.mensaje.value;
 
-    const extrasSeleccionados = Array.from(
-      form.querySelectorAll('input[name="extras"]:checked')
-    ).map((extra) => `- ${extra.value}`);
+    const subject = encodeURIComponent("Consulta desde WebExpress");
 
-    const extrasTexto =
-      extrasSeleccionados.length > 0
-        ? extrasSeleccionados.join('\n')
-        : 'Ninguno';
-
-    const texto = `
-Hola! 👋
-Quiero una web.
-
+    const body = encodeURIComponent(`
 Nombre: ${nombre}
 Email: ${email}
+Plan elegido: ${plan}
 
-Extras solicitados:
-${extrasTexto}
+Extras:
+${extras.length ? "- " + extras.join("\n- ") : "Ninguno"}
 
 Mensaje:
 ${mensaje}
-    `;
+    `);
 
-    window.open(
-      'https://wa.me/5492612113198?text=' + encodeURIComponent(texto),
-      '_blank'
-    );
+    window.location.href = `mailto:tucorreo@dominio.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -41,40 +35,48 @@ ${mensaje}
       <div className="section__container">
         <h2 className="contact__title">Contacto</h2>
         <p className="contact__subtitle">
-          Completá el formulario y te respondemos por WhatsApp
+          Completá el formulario y te respondemos por mail
         </p>
 
         <div className="contact__grid">
+          {/* FORM */}
           <form className="contact__form" onSubmit={handleSubmit}>
-            <input type="text" name="nombre" placeholder="Nombre" required />
-            <input type="email" name="email" placeholder="Email" required />
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Nombre"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+
+            <select name="plan" required>
+              <option value="">Elegí un plan</option>
+              <option value="Starter">Starter</option>
+              <option value="Pro">Pro</option>
+              <option value="Negocio">Negocio</option>
+            </select>
 
             {/* EXTRAS */}
             <div className="contact__extras">
-              <h3>Extras (opcional)</h3>
               <label>
-                <input type="checkbox" name="extras" value="Control de stock" />
-                Stock
+                <input type="checkbox" name="extras" value="SEO básico" />
+                SEO básico
               </label>
 
               <label>
-                <input type="checkbox" name="extras" value="Turnos / Reservas" />
-                Turnos
+                <input type="checkbox" name="extras" value="WhatsApp integrado" />
+                WhatsApp integrado
               </label>
 
               <label>
-                <input type="checkbox" name="extras" value="Gestión de clientes" />
-                Clientes
-              </label>
-
-              <label>
-                <input type="checkbox" name="extras" value="Panel admin" />
-                Panel admin
-              </label>
-
-              <label>
-                <input type="checkbox" name="extras" value="Integraciones" />
-                Integraciones
+                <input type="checkbox" name="extras" value="Sistema a medida" />
+                Sistema a medida
               </label>
             </div>
 
@@ -85,21 +87,22 @@ ${mensaje}
             />
 
             <button type="submit" className="btn btn--primary">
-              Enviar por WhatsApp
+              Enviar por mail
             </button>
           </form>
 
+          {/* CTA */}
           <div className="contact__cta">
-            <h3>¿Preferís hablar directo?</h3>
-            <p>Escribinos y lo vemos sin vueltas.</p>
+            <h3>¿Preferís escribir directo?</h3>
+            <p>
+              Podés mandarnos un mail y lo vemos sin vueltas.
+            </p>
 
             <a
-              href="https://wa.me/5492612113198"
-              target="_blank"
-              rel="noreferrer"
+              href="mailto:leanahuelarias@gmail.com"
               className="btn btn--outline"
             >
-              Abrir WhatsApp
+              Abrir mail
             </a>
           </div>
         </div>
