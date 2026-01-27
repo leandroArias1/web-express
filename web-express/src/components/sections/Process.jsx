@@ -26,7 +26,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <Section variant="soft">
+    <Section variant="soft" id="process">
       <div className="process">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

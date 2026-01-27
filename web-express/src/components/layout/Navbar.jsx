@@ -10,7 +10,7 @@ const Navbar = () => {
 
         <nav className="navbar__nav">
           <a href="#planes">Planes</a>
-          <a href="#para-quien">Para quién</a>
+          <a href="#process">Como trabajamos</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
