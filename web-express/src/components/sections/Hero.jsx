@@ -39,7 +39,7 @@ const Hero = () => {
             Consultar por WhatsApp
           </Button>
 
-          <Button variant="outline">
+          <Button variant="outline" href="#planes">
             Ver planes
           </Button>
         </motion.div>
