@@ -1,6 +1,5 @@
 import Navbar from '../components/layout/Navbar'
 import Hero from '../components/sections/Hero'
-import Target from '../components/sections/Target'
 import Plans from '../components/sections/Plans'
 import Process from '../components/sections/Process'
 import Requirements from '../components/sections/Requirements'
@@ -14,7 +13,6 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      <Target />
       <Plans />
       <Extras />
       <Process />

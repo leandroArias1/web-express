@@ -26,9 +26,14 @@ const Plans = () => {
               <li>Botón WhatsApp</li>
               <li>Entrega en 24 hs</li>
             </ul>
-            <Button href="https://wa.me/5492612113198">
-              Elegir Express
-            </Button>
+            <div className="plan__actions">
+              <Button href="https://wa.link/zddsqj">
+                Elegir Express
+              </Button>
+              <Button variant="outline" href="#extras">
+                Ver Demo
+              </Button>
+            </div>
           </motion.div>
 
           {/* NEGOCIO */}
@@ -47,9 +52,14 @@ const Plans = () => {
               <li>Entrega en 48 hs</li>
               <li>Posibilidad de sumar módulos a medida</li>
             </ul>
-            <Button href="https://wa.me/5492612113198">
-              Elegir Negocio
-            </Button>
+            <div className="plan__actions">
+              <Button href="https://wa.link/g3253s">
+                Elegir Negocio
+              </Button>
+              <Button variant="outline" href="#extras">
+                Ver Demo
+              </Button>
+            </div>
           </motion.div>
 
           {/* PRO */}
@@ -62,9 +72,15 @@ const Plans = () => {
               <li>Animaciones avanzadas</li>
               <li>Copy optimizado</li>
             </ul>
-            <Button href="https://wa.me/5492612113198">
-              Elegir Pro
-            </Button>
+            <div className="plan__actions">
+              <Button href="https://wa.link/cjt13g">
+                Elegir Pro
+              </Button>
+              <Button variant="outline" href="#extras">
+                Ver Demo
+              </Button>
+            </div>
+
           </motion.div>
         </div>
       </div>

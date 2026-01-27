@@ -290,6 +290,22 @@ body {
   font-family: var(--font-title);
 }
 
+.plan__actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.plan__actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .plan__actions {
+    flex-direction: column;
+  }
+}
+
 
 /* ================================
    PROCESS

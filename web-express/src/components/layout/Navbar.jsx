@@ -15,7 +15,7 @@ const Navbar = () => {
         </nav>
 
         <Button
-          href="https://wa.me/5492612113198"
+          href="https://wa.link/1x6woe"
           target="_blank"
         >
           WhatsApp
