@@ -27,7 +27,7 @@ Mensaje:
 ${mensaje}
     `);
 
-    window.location.href = `mailto:tucorreo@dominio.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:leanahuelarias@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -95,14 +95,16 @@ ${mensaje}
           <div className="contact__cta">
             <h3>¿Preferís escribir directo?</h3>
             <p>
-              Podés mandarnos un mail y lo vemos sin vueltas.
+              Podés mandarnos un mensaje por WhatsApp y lo vemos sin vueltas.
             </p>
 
             <a
-              href="mailto:leanahuelarias@gmail.com"
+              href="https://wa.link/1x6woe"
               className="btn btn--outline"
+              target="_blank"
+              rel="noreferrer"
             >
-              Abrir mail
+              Abrir WhatsApp
             </a>
           </div>
         </div>
