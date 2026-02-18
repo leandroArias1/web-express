@@ -9,7 +9,7 @@ const demosNegocio = [
     id: 1,
     title: 'Café Aroma',
     description: 'Web completa para cafetería con menú interactivo y galería',
-    image: '/demos/cafe.jpg',
+    image: '/demos/volt.png',
     url: 'https://cafe-aroma-demo.netlify.app',
     tags: ['Web completa', 'Gastronomía', 'Menú']
   },
@@ -17,7 +17,7 @@ const demosNegocio = [
     id: 2,
     title: 'Barbería Classic',
     description: 'Sitio profesional con sistema de turnos online',
-    image: '/demos/barberia.jpg',
+    image: '/demos/total-service-car.png',
     url: 'https://barberia-demo.netlify.app',
     tags: ['Turnos', 'Servicios', 'Reservas']
   },
@@ -25,7 +25,7 @@ const demosNegocio = [
     id: 3,
     title: 'Clínica Dental',
     description: 'Web médica con formulario de contacto y servicios',
-    image: '/demos/dental.jpg',
+    image: '/demos/volt.png',
     url: 'https://dental-demo.netlify.app',
     tags: ['Salud', 'Profesional', 'Formulario']
   },
@@ -33,7 +33,7 @@ const demosNegocio = [
     id: 4,
     title: 'Estudio Contable',
     description: 'Sitio corporativo para estudio de contadores',
-    image: '/demos/contable.jpg',
+    image: '/demos/total-service-car.png',
     url: 'https://contable-demo.netlify.app',
     tags: ['Corporativo', 'Servicios', 'SEO']
   },
@@ -41,7 +41,7 @@ const demosNegocio = [
     id: 5,
     title: 'Taller Mecánico',
     description: 'Web con catálogo de servicios y WhatsApp integrado',
-    image: '/demos/mecanico.jpg',
+    image: '/demos/volt.png',
     url: 'https://mecanico-demo.netlify.app',
     tags: ['Automotriz', 'Servicios', 'Catálogo']
   }

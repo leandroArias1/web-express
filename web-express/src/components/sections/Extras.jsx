@@ -9,33 +9,34 @@ const Extras = () => {
 
         <div className="extras__grid">
           <div className="extra__card">
-            <h3>📦 Control de stock</h3>
+            <h3>📦 Sistema de stock</h3>
             <p>Gestión de productos, cantidades y movimientos.</p>
-            <span>Desde $XX.XXX</span>
+            <span>Desde $80.000 ARS</span>
           </div>
 
           <div className="extra__card">
-            <h3>📅 Turnos / Reservas</h3>
+            <h3>📅 Sistema de Turnos / Reservas</h3>
             <p>Agenda online para clientes y administración interna.</p>
-            <span>Desde $XX.XXX</span>
+            <span>Desde $70.000 ARS</span>
           </div>
 
           <div className="extra__card">
-            <h3>👥 Gestión de clientes</h3>
+            <h3>📊 Panel administrador</h3>
             <p>Base de datos, historial y seguimiento.</p>
-            <span>Desde $XX.XXX</span>
+            <span>Desde $50.000 ARS</span>
           </div>
 
           <div className="extra__card">
-            <h3>🧠 Panel de administración</h3>
-            <p>Panel privado para manejar tu sistema.</p>
+            <h3>📈 SEO avanzado y optimización</h3>
+            <p>Optimización técnica avanzada, mejora de velocidad de carga y posicionamiento SEO.</p>
             <span>Incluido en Pro / Negocio</span>
+            <span> Desde $30.000 ARS</span>
           </div>
 
           <div className="extra__card">
             <h3>🔌 Integraciones</h3>
             <p>WhatsApp, email, APIs, servicios externos.</p>
-            <span>A definir</span>
+            <span>Desde $20.000 ARS</span>
           </div>
         </div>
       </div>

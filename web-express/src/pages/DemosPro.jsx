@@ -7,51 +7,19 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 const demosPro = [
   {
     id: 1,
-    title: 'Estudio Legal',
-    description: 'Sitio profesional para estudio de abogados con animaciones avanzadas',
-    image: '/demos/legal.jpg',
-    url: 'https://estudio-legal-demo.netlify.app',
+    title: 'Total Service Car',
+    description: 'Controlador de Stock para taller automotriz con diseño profesional',
+    image: '/demos/total-service-car.png',
+    url: 'https://sistema-stock-eta.vercel.app',
     tags: ['Profesional', 'Corporativo', 'SEO']
   },
   {
     id: 2,
-    title: 'TechStore',
+    title: 'Volt',
     description: 'E-commerce completo para tienda de tecnología',
-    image: '/demos/tech.jpg',
-    url: 'https://techstore-demo.netlify.app',
+    image: '/demos/volt.png',
+    url: 'https://e-commerce-woad-beta-46.vercel.app',
     tags: ['E-commerce', 'Tecnología', 'Tienda']
-  },
-  {
-    id: 3,
-    title: 'Inmobiliaria Premium',
-    description: 'Portal inmobiliario con filtros avanzados y galería dinámica',
-    image: '/demos/real-estate.jpg',
-    url: 'https://inmobiliaria-demo.netlify.app',
-    tags: ['Inmobiliaria', 'Filtros', 'Catálogo']
-  },
-  {
-    id: 4,
-    title: 'Arquitectura Moderna',
-    description: 'Portfolio para estudio de arquitectura con galería interactiva',
-    image: '/demos/arquitectura.jpg',
-    url: 'https://arquitectura-demo.netlify.app',
-    tags: ['Portfolio', 'Galería', 'Diseño']
-  },
-  {
-    id: 5,
-    title: 'Restaurant Gourmet',
-    description: 'Web premium con sistema de reservas y menú digital',
-    image: '/demos/restaurant.jpg',
-    url: 'https://restaurant-demo.netlify.app',
-    tags: ['Gastronomía', 'Reservas', 'Premium']
-  },
-  {
-    id: 6,
-    title: 'Agencia Creativa',
-    description: 'Sitio moderno para agencia con portfolio y animaciones',
-    image: '/demos/agencia.jpg',
-    url: 'https://agencia-demo.netlify.app',
-    tags: ['Agencia', 'Portfolio', 'Animaciones']
   }
 ]
 
@@ -104,7 +72,7 @@ const DemosPro = () => {
                   src={demo.image} 
                   alt={demo.title}
                   onError={(e) => {
-                    e.target.src = `https://placehold.co/600x400/1a1a1a/ffffff?text=${demo.title}`
+                    e.target.src = `https://placehold.co/600x400/1a1a1a/ffffff?text=${demo.image}`
                   }}
                 />
                 <span className="demo-card__category demo-card__category--pro">Pro</span>

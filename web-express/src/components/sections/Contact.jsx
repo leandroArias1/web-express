@@ -67,17 +67,27 @@ ${mensaje}
               <p>Extras</p>
               <label>
                 <input type="checkbox" name="extras" value="SEO básico" />
-                SEO básico
+                Sistema de Stock
               </label>
 
               <label>
                 <input type="checkbox" name="extras" value="WhatsApp integrado" />
-                WhatsApp integrado
+                Sistema de Turnos / Reservas
               </label>
 
               <label>
                 <input type="checkbox" name="extras" value="Sistema a medida" />
-                Sistema a medida
+                Panel administrador
+              </label>
+
+              <label>
+                <input type="checkbox" name="extras" value="Sistema a medida" />
+                SEO avanzado y optimización
+              </label>
+
+              <label>
+                <input type="checkbox" name="extras" value="Sistema a medida" />
+                Integraciones
               </label>
             </div>
 

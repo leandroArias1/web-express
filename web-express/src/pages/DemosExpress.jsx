@@ -7,35 +7,27 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 const demosExpress = [
   {
     id: 1,
-    title: 'Studio Fitness',
+    title: 'FitGym',
     description: 'Landing page para gimnasio con diseño moderno y dinámico',
-    image: '/demos/fitness.jpg',
-    url: 'https://studio-fitness-demo.netlify.app',
+    image: '/demos/fitgym.png',
+    url: 'https://fitgym-landing.vercel.app',
     tags: ['Landing', 'Fitness', 'Moderno']
   },
   {
     id: 2,
-    title: 'Café Central',
-    description: 'Landing page minimalista para cafetería',
-    image: '/demos/cafe-express.jpg',
-    url: 'https://cafe-express-demo.netlify.app',
-    tags: ['Landing', 'Gastronomía', 'Simple']
+    title: 'Estudio Contable',
+    description: 'Landing page minimalista para estudio de contadores',
+    image: '/demos/estudio-contable.png',
+    url: 'https://estudio-contable-ruby.vercel.app',
+    tags: ['Landing', 'Contabilidad', 'Simple']
   },
   {
     id: 3,
-    title: 'Barbería Clásica',
+    title: 'Barbería',
     description: 'Landing page elegante para barbería tradicional',
-    image: '/demos/barberia-express.jpg',
-    url: 'https://barberia-express-demo.netlify.app',
+    image: '/demos/barberia.png',
+    url: 'https://landing-simple-pi.vercel.app',
     tags: ['Landing', 'Servicios', 'Elegante']
-  },
-  {
-    id: 4,
-    title: 'Estudio Yoga',
-    description: 'Landing page relajante para estudio de yoga',
-    image: '/demos/yoga.jpg',
-    url: 'https://yoga-express-demo.netlify.app',
-    tags: ['Landing', 'Wellness', 'Zen']
   }
 ]
 
