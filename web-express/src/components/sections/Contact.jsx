@@ -64,6 +64,7 @@ ${mensaje}
 
             {/* EXTRAS */}
             <div className="contact__extras">
+              <p>Extras</p>
               <label>
                 <input type="checkbox" name="extras" value="SEO básico" />
                 SEO básico

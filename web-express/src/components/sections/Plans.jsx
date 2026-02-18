@@ -30,8 +30,8 @@ const Plans = () => {
               <Button href="https://wa.link/zddsqj">
                 Elegir Express
               </Button>
-              <Button variant="outline" href="#extras">
-                Ver Demo
+              <Button variant="outline" href="/demos/express">
+                Ver Demos
               </Button>
             </div>
           </motion.div>
@@ -56,8 +56,8 @@ const Plans = () => {
               <Button href="https://wa.link/g3253s">
                 Elegir Negocio
               </Button>
-              <Button variant="outline" href="#extras">
-                Ver Demo
+              <Button variant="outline" href="/demos/negocio">
+                Ver Demos
               </Button>
             </div>
           </motion.div>
@@ -76,8 +76,8 @@ const Plans = () => {
               <Button href="https://wa.link/cjt13g">
                 Elegir Pro
               </Button>
-              <Button variant="outline" href="#extras">
-                Ver Demo
+              <Button variant="outline" href="/demos/pro">
+                Ver Demos
               </Button>
             </div>
 
