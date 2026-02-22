@@ -8,7 +8,7 @@ const demosNegocio = [
   {
     id: 1,
     title: 'Rossa Repuestos',
-    description: 'Web completa para repuestos de camiones IEVCO',
+    description: 'Web completa para repuestos de camiones IVECO',
     image: '/demos/rossa.png',
     url: 'https://negocio-rossa-repuestos.vercel.app/',
     tags: ['Web completa', 'Repuestos', 'Catálogo']
