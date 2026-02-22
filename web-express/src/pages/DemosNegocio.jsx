@@ -20,30 +20,6 @@ const demosNegocio = [
     image: '/demos/farine.png',
     url: 'https://negocio-2.vercel.app/',
     tags: ['Panadería', 'Pastelería', 'Servicios']
-  },
-  {
-    id: 3,
-    title: 'Clínica Dental',
-    description: 'Web médica con formulario de contacto y servicios',
-    image: '/demos/volt.png',
-    url: 'https://dental-demo.netlify.app',
-    tags: ['Salud', 'Profesional', 'Formulario']
-  },
-  {
-    id: 4,
-    title: 'Estudio Contable',
-    description: 'Sitio corporativo para estudio de contadores',
-    image: '/demos/total-service-car.png',
-    url: 'https://contable-demo.netlify.app',
-    tags: ['Corporativo', 'Servicios', 'SEO']
-  },
-  {
-    id: 5,
-    title: 'Taller Mecánico',
-    description: 'Web con catálogo de servicios y WhatsApp integrado',
-    image: '/demos/volt.png',
-    url: 'https://mecanico-demo.netlify.app',
-    tags: ['Automotriz', 'Servicios', 'Catálogo']
   }
 ]
 
