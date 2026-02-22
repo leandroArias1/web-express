@@ -28,6 +28,30 @@ const demosExpress = [
     image: '/demos/barberia.png',
     url: 'https://landing-simple-pi.vercel.app',
     tags: ['Landing', 'Servicios', 'Elegante']
+  },
+  {
+    id: 4,
+    title: 'Aura',
+    description: 'Diseño interiores y exteriores',
+    image: '/demos/aura.png',
+    url: 'https://express-2-seven.vercel.app',
+    tags: ['Landing', 'Servicios', 'Elegante']
+  },
+  {
+    id: 5,
+    title: 'Drake y Associates',
+    description: 'Buffet de abogados',
+    image: '/demos/drake.png',
+    url: 'https://express-1-two.vercel.app/',
+    tags: ['Landing', 'Servicios', 'Elegante']
+  },
+  {
+    id: 6,
+    title: 'Barberia Eclipse',
+    description: 'Barberia con sistema de turnos online',
+    image: '/demos/eclipse.png',
+    url: 'https://express-3-sepia.vercel.app/',
+    tags: ['Landing', 'Servicios', 'Elegante']
   }
 ]
 

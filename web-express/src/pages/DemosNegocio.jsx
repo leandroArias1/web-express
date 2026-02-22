@@ -7,19 +7,19 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 const demosNegocio = [
   {
     id: 1,
-    title: 'Café Aroma',
-    description: 'Web completa para cafetería con menú interactivo y galería',
-    image: '/demos/volt.png',
-    url: 'https://cafe-aroma-demo.netlify.app',
-    tags: ['Web completa', 'Gastronomía', 'Menú']
+    title: 'Rossa Repuestos',
+    description: 'Web completa para repuestos de camiones IEVCO',
+    image: '/demos/rossa.png',
+    url: 'https://negocio-rossa-repuestos.vercel.app/',
+    tags: ['Web completa', 'Repuestos', 'Catálogo']
   },
   {
     id: 2,
-    title: 'Barbería Classic',
-    description: 'Sitio profesional con sistema de turnos online',
-    image: '/demos/total-service-car.png',
-    url: 'https://barberia-demo.netlify.app',
-    tags: ['Turnos', 'Servicios', 'Reservas']
+    title: 'Farine',
+    description: 'Panadería y pastelería',
+    image: '/demos/farine.png',
+    url: 'https://negocio-2.vercel.app/',
+    tags: ['Panadería', 'Pastelería', 'Servicios']
   },
   {
     id: 3,
