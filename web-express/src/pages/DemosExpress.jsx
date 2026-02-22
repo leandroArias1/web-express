@@ -6,14 +6,6 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 
 const demosExpress = [
   {
-    id: 1,
-    title: 'FitGym',
-    description: 'Landing page para gimnasio con diseño moderno y dinámico',
-    image: '/demos/fitgym.png',
-    url: 'https://fitgym-landing.vercel.app',
-    tags: ['Landing', 'Fitness', 'Moderno']
-  },
-  {
     id: 2,
     title: 'Estudio Contable',
     description: 'Landing page minimalista para estudio de contadores',
@@ -52,6 +44,14 @@ const demosExpress = [
     image: '/demos/eclipse.png',
     url: 'https://express-3-sepia.vercel.app/',
     tags: ['Landing', 'Servicios', 'Elegante']
+  },
+  {
+    id: 1,
+    title: 'FitGym',
+    description: 'Landing page para gimnasio con diseño moderno y dinámico',
+    image: '/demos/fitgym.png',
+    url: 'https://fitgym-landing.vercel.app',
+    tags: ['Landing', 'Fitness', 'Moderno']
   }
 ]
 
