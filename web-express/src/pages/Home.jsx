@@ -1,22 +1,26 @@
 import Navbar from '../components/layout/Navbar'
 import Hero from '../components/sections/Hero'
+import Services from '../components/sections/Services'
 import Plans from '../components/sections/Plans'
+import Portfolio from '../components/sections/Portfolio'
 import Process from '../components/sections/Process'
-import Requirements from '../components/sections/Requirements'
+import WhyUs from '../components/sections/WhyUs'
+import Extras from '../components/sections/Extras'
 import FAQ from '../components/sections/FAQ'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/layout/Footer'
-import Extras from '../components/sections/Extras'
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <Services />
       <Plans />
-      <Extras />
+      <Portfolio />
       <Process />
-      <Requirements />
+      <WhyUs />
+      <Extras />
       <FAQ />
       <Contact />
       <Footer />
