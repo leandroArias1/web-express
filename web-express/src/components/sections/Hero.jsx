@@ -68,10 +68,6 @@ const Hero = () => {
 
         <motion.div variants={itemVariants} className="hero__trust">
           <div className="hero__trust-item">
-            <strong>+50</strong>
-            <span>proyectos lanzados</span>
-          </div>
-          <div className="hero__trust-item">
             <strong>24/7</strong>
             <span>acompañamiento post-entrega</span>
           </div>

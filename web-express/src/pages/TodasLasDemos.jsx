@@ -153,6 +153,10 @@ const TodasLasDemos = () => {
                     e.target.src = `https://placehold.co/600x400/1a1a1a/ffffff?text=${demo.title}`
                   }}
                 />
+                <div className="demo-card__overlay">
+                  <ExternalLink size={28} strokeWidth={2} />
+                </div>
+                <div className="demo-card__shine" />
                 <span className={`demo-card__category demo-card__category--${demo.category.toLowerCase()}`}>
                   {demo.category}
                 </span>

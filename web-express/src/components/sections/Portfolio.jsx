@@ -71,9 +71,8 @@ const Portfolio = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           {featuredDemos.map((demo) => (
-            <motion.a
+            <motion.article
               key={demo.title}
-              href={demo.url}
               variants={cardVariants}
               whileHover={{ y: -6 }}
               transition={{ type: 'spring', stiffness: 220, damping: 18 }}
@@ -95,9 +94,11 @@ const Portfolio = () => {
               <div className="portfolio-card__content">
                 <span className="portfolio-card__category">{demo.category}</span>
                 <h3 className="portfolio-card__title">{demo.title}</h3>
-                <p className="portfolio-card__more">Ver demo en detalle</p>
+                <a href={demo.url} className="portfolio-card__more">
+                  Ver demo
+                </a>
               </div>
-            </motion.a>
+            </motion.article>
           ))}
         </motion.div>
 
