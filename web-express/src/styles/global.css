@@ -51,12 +51,17 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.45rem;
   padding: 0.9rem 1.8rem;
+  min-height: 48px;
   border-radius: var(--radius-lg);
   font-family: var(--font-title);
   font-size: 0.95rem;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
   border: none;
   overflow: hidden;
@@ -1037,8 +1042,9 @@ input[type="button"] {
   }
 
   .btn {
-    padding: 0.85rem 1rem;
-    font-size: 0.88rem;
+    padding: 0.82rem 0.95rem;
+    font-size: 0.86rem;
+    white-space: normal;
   }
 
   .hero__eyebrow {

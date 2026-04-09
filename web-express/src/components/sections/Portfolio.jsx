@@ -75,9 +75,9 @@ const Portfolio = () => {
               key={demo.title}
               href={demo.url}
               variants={cardVariants}
-              whileHover={{ y: -10, scale: 1.015 }}
-              transition={{ duration: 0.35 }}
-              className="portfolio-card"
+              whileHover={{ y: -6 }}
+              transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+              className="portfolio-card project-card"
             >
               <div className="portfolio-card__image">
                 <img 
