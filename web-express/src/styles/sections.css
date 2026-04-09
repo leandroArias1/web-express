@@ -30,12 +30,14 @@
 }
 
 .service-card {
+  position: relative;
   background: var(--color-bg-card);
   padding: var(--space-md);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   transition: all var(--transition-base);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .service-card:hover {
@@ -68,6 +70,23 @@
   color: var(--color-text-muted);
   line-height: 1.6;
   font-size: var(--fs-small);
+}
+
+.service-card__beam {
+  position: absolute;
+  inset: auto -20% -48px auto;
+  width: 68%;
+  height: 90px;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(124,255,0,0.45), transparent 70%);
+  transform: translateY(22px);
+  transition: all 0.35s ease;
+  pointer-events: none;
+}
+
+.service-card:hover .service-card__beam {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ============================================
@@ -154,6 +173,26 @@
   opacity: 1;
 }
 
+.portfolio-card__shine {
+  position: absolute;
+  top: -180%;
+  left: -140%;
+  width: 55%;
+  height: 400%;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255,255,255,0.16) 50%,
+    transparent 100%
+  );
+  transform: rotate(24deg);
+  transition: transform 0.8s ease;
+}
+
+.portfolio-card:hover .portfolio-card__shine {
+  transform: translateX(280%) rotate(24deg);
+}
+
 .portfolio-card__content {
   padding: var(--space-md);
   text-align: left;
@@ -175,6 +214,19 @@
   font-weight: 700;
   color: var(--color-text-main);
   font-family: var(--font-title);
+}
+
+.portfolio-card__more {
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+  color: var(--color-primary);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-card__more {
+  transform: translateX(6px);
+  opacity: 1;
 }
 
 .portfolio__cta {
@@ -228,6 +280,7 @@
 }
 
 .feature-card__icon {
+  position: relative;
   width: 80px;
   height: 80px;
   background: var(--gradient-primary);
@@ -237,6 +290,14 @@
   justify-content: center;
   margin: 0 auto var(--space-md);
   color: var(--color-text-inverted);
+}
+
+.feature-card__ring {
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1px solid rgba(124,255,0,0.35);
+  animation: pulseRing 2.4s ease-out infinite;
 }
 
 .feature-card__stat {
@@ -256,6 +317,20 @@
   margin-bottom: var(--space-xs);
   color: var(--color-text-main);
   font-family: var(--font-title);
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.12);
+    opacity: 0;
+  }
 }
 
 .feature-card__description {
