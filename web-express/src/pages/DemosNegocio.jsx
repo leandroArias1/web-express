@@ -63,8 +63,8 @@ const DemosNegocio = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="demo-card"
+              whileHover={{ y: -6 }}
+              className="demo-card project-card"
             >
               {/* Imagen */}
               <div className="demo-card__image">
@@ -75,6 +75,10 @@ const DemosNegocio = () => {
                     e.target.src = `https://placehold.co/600x400/1a1a1a/ffffff?text=${demo.title}`
                   }}
                 />
+                <div className="demo-card__overlay">
+                  <ExternalLink size={28} strokeWidth={2} />
+                </div>
+                <div className="demo-card__shine" />
                 <span className="demo-card__category demo-card__category--negocio">Negocio</span>
               </div>
 

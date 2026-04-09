@@ -2,6 +2,24 @@ import Section from '../ui/Section'
 import { motion } from 'framer-motion'
 import { Zap, Palette, Code, Smartphone } from 'lucide-react'
 
+const sectionVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12
+    }
+  }
+}
+
+const revealUp = {
+  hidden: { opacity: 0, y: 28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] }
+  }
+}
+
 const services = [
   {
     icon: Zap,
@@ -49,17 +67,19 @@ const Services = () => {
           Desde landing pages hasta e-commerce completos.
         </motion.p>
 
-        <div className="services__grid">
-          {services.map((service, index) => {
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={sectionVariants}
+          className="services__grid"
+        >
+          {services.map((service) => {
             const Icon = service.icon
             return (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
+                variants={revealUp}
                 className="service-card"
               >
                 <div className="service-card__icon">
@@ -70,7 +90,7 @@ const Services = () => {
               </motion.div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </Section>
   )

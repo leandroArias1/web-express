@@ -3,6 +3,22 @@ import Button from '../ui/Button'
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 
+const gridVariants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12 }
+  }
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 35 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+  }
+}
+
 const featuredDemos = [
   {
     title: 'FitGym',
@@ -47,17 +63,20 @@ const Portfolio = () => {
           Conocé algunos de los proyectos que desarrollamos
         </motion.p>
 
-        <div className="portfolio__grid">
-          {featuredDemos.map((demo, index) => (
-            <motion.a
+        <motion.div
+          className="portfolio__grid"
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+        >
+          {featuredDemos.map((demo) => (
+            <motion.article
               key={demo.title}
-              href={demo.url}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="portfolio-card"
+              variants={cardVariants}
+              whileHover={{ y: -6 }}
+              transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+              className="portfolio-card project-card"
             >
               <div className="portfolio-card__image">
                 <img 
@@ -70,14 +89,18 @@ const Portfolio = () => {
                 <div className="portfolio-card__overlay">
                   <ExternalLink size={32} strokeWidth={2} />
                 </div>
+                <div className="portfolio-card__shine" />
               </div>
               <div className="portfolio-card__content">
                 <span className="portfolio-card__category">{demo.category}</span>
                 <h3 className="portfolio-card__title">{demo.title}</h3>
+                <a href={demo.url} className="portfolio-card__more">
+                  Ver demo
+                </a>
               </div>
-            </motion.a>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -30,18 +30,13 @@
 }
 
 .service-card {
+  position: relative;
   background: var(--color-bg-card);
   padding: var(--space-md);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   transition: all var(--transition-base);
-  cursor: pointer;
-}
-
-.service-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-8px);
+  cursor: default;
 }
 
 .service-card__icon {
@@ -107,16 +102,16 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-border);
-  transition: all var(--transition-base);
+  transition: border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease;
   cursor: pointer;
   text-decoration: none;
   display: block;
 }
 
-.portfolio-card:hover {
+.portfolio-card:hover,
+.project-card:hover {
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-8px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
 }
 
 .portfolio-card__image {
@@ -131,11 +126,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-base);
+  transition: transform 0.45s ease;
 }
 
-.portfolio-card:hover .portfolio-card__image img {
-  transform: scale(1.05);
+.portfolio-card:hover .portfolio-card__image img,
+.project-card:hover .portfolio-card__image img {
+  transform: scale(1.03);
 }
 
 .portfolio-card__overlay {
@@ -152,6 +148,20 @@
 
 .portfolio-card:hover .portfolio-card__overlay {
   opacity: 1;
+}
+
+.portfolio-card__shine {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(124,255,0,0.18), transparent 65%);
+  opacity: 0.55;
+  transition: opacity 0.28s ease;
+}
+
+.portfolio-card:hover .portfolio-card__shine,
+.project-card:hover .portfolio-card__shine {
+  opacity: 0.82;
 }
 
 .portfolio-card__content {
@@ -175,6 +185,22 @@
   font-weight: 700;
   color: var(--color-text-main);
   font-family: var(--font-title);
+}
+
+.portfolio-card__more {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+  color: var(--color-primary);
+  opacity: 0.8;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-card__more {
+  transform: translateX(6px);
+  opacity: 1;
 }
 
 .portfolio__cta {
@@ -224,10 +250,10 @@
 .feature-card:hover {
   border-color: var(--color-primary);
   box-shadow: 0 0 30px rgba(124,255,0,0.25);
-  transform: translateY(-6px);
 }
 
 .feature-card__icon {
+  position: relative;
   width: 80px;
   height: 80px;
   background: var(--gradient-primary);
@@ -237,6 +263,14 @@
   justify-content: center;
   margin: 0 auto var(--space-md);
   color: var(--color-text-inverted);
+}
+
+.feature-card__ring {
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1px solid rgba(124,255,0,0.35);
+  animation: pulseRing 2.4s ease-out infinite;
 }
 
 .feature-card__stat {
@@ -256,6 +290,20 @@
   margin-bottom: var(--space-xs);
   color: var(--color-text-main);
   font-family: var(--font-title);
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.12);
+    opacity: 0;
+  }
 }
 
 .feature-card__description {
@@ -298,6 +346,17 @@
    RESPONSIVE
    ============================================ */
 
+@media (max-width: 1024px) {
+  .services__grid,
+  .why-us__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .services__grid,
   .portfolio__grid,
@@ -312,5 +371,32 @@
 
   .why-us__cta {
     padding: var(--space-md);
+  }
+
+  .portfolio-card__content,
+  .service-card,
+  .feature-card {
+    text-align: left;
+  }
+
+  .portfolio-card__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .service-card__icon,
+  .feature-card__icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .feature-card__stat {
+    font-size: 2rem;
   }
 }

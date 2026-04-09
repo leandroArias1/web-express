@@ -2,6 +2,25 @@ import Section from '../ui/Section'
 import { motion } from 'framer-motion'
 import { Clock, Award, Users, Shield } from 'lucide-react'
 
+const cardsVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const scaleReveal = {
+  hidden: { opacity: 0, y: 24, scale: 0.94 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] }
+  }
+}
+
 const features = [
   {
     icon: Clock,
@@ -52,21 +71,26 @@ const WhyUs = () => {
           Nos diferenciamos por nuestra velocidad, calidad y compromiso con cada proyecto
         </motion.p>
 
-        <div className="why-us__grid">
-          {features.map((feature, index) => {
+        <motion.div
+          className="why-us__grid"
+          variants={cardsVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {features.map((feature) => {
             const Icon = feature.icon
             return (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -6 }}
+                variants={scaleReveal}
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
                 className="feature-card"
               >
                 <div className="feature-card__icon">
                   <Icon size={36} strokeWidth={2} />
+                  <span className="feature-card__ring" />
                 </div>
                 <div className="feature-card__stat">{feature.stat}</div>
                 <h3 className="feature-card__title">{feature.title}</h3>
@@ -74,7 +98,7 @@ const WhyUs = () => {
               </motion.div>
             )
           })}
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
