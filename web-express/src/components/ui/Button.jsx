@@ -6,8 +6,11 @@ const Button = ({
   onClick,
   variant = 'primary',
   target,
+  rel,
+  className = ''
 }) => {
   const Component = href ? 'a' : 'button'
+  const baseClassName = `btn btn--${variant} ${className}`.trim()
 
   return (
     <motion.div
@@ -18,7 +21,8 @@ const Button = ({
         href={href}
         onClick={onClick}
         target={target}
-        className={`btn btn--${variant}`}
+        rel={rel}
+        className={baseClassName}
       >
         <span className="btn__glow" />
         <span className="btn__text">{children}</span>
