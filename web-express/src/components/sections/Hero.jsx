@@ -85,18 +85,6 @@ const Hero = () => {
       {/* spotlight / glow decorativo */}
       <div className="hero__spotlight" />
       <div className="hero__spotlight hero__spotlight--secondary" />
-      <motion.div
-        aria-hidden="true"
-        className="hero__floating hero__floating--one"
-        animate={{ y: [0, -12, 0], x: [0, 5, 0], rotate: [0, 1.5, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        aria-hidden="true"
-        className="hero__floating hero__floating--two"
-        animate={{ y: [0, 10, 0], x: [0, -8, 0], rotate: [0, -1, 0] }}
-        transition={{ duration: 9.5, repeat: Infinity, ease: 'easeInOut' }}
-      />
     </Section>
   )
 }

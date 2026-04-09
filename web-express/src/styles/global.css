@@ -227,30 +227,6 @@ body {
   filter: blur(100px);
 }
 
-.hero__floating {
-  position: absolute;
-  z-index: 1;
-  border-radius: 28px;
-  border: 1px solid rgba(124,255,0,0.3);
-  background: linear-gradient(155deg, rgba(124,255,0,0.2), rgba(124,255,0,0.05));
-  box-shadow: 0 18px 50px rgba(124,255,0,0.13);
-  backdrop-filter: blur(6px);
-}
-
-.hero__floating--one {
-  width: 150px;
-  height: 130px;
-  top: 22%;
-  right: 7%;
-}
-
-.hero__floating--two {
-  width: 108px;
-  height: 108px;
-  bottom: 18%;
-  right: 16%;
-}
-
 /* ================================
    TARGET
    ================================ */
@@ -662,8 +638,8 @@ body {
   z-index: 100;
   background: rgba(11, 15, 14, 0.8);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  box-shadow: none;
   transition: var(--transition-fast);
   border-radius: 30px;
   box-sizing: border-box;
@@ -684,6 +660,7 @@ body {
   font-family: var(--font-title);
   font-size: 1.2rem;
   color: var(--color-text-main);
+  text-decoration: none;
 }
 
 .navbar__logo span {
@@ -961,8 +938,7 @@ input[type="button"] {
     filter: blur(100px);
   }
 
-  .hero__spotlight--secondary,
-  .hero__floating {
+  .hero__spotlight--secondary {
     display: none;
   }
 }

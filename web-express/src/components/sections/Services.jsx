@@ -80,20 +80,13 @@ const Services = () => {
               <motion.div
                 key={service.title}
                 variants={revealUp}
-                whileHover={{ y: -10, scale: 1.02 }}
-                transition={{ duration: 0.35 }}
                 className="service-card"
               >
-                <motion.div
-                  className="service-card__icon"
-                  whileHover={{ rotate: -7, scale: 1.08 }}
-                  transition={{ type: 'spring', stiffness: 220, damping: 14 }}
-                >
+                <div className="service-card__icon">
                   <Icon size={28} strokeWidth={2} />
-                </motion.div>
+                </div>
                 <h3 className="service-card__title">{service.title}</h3>
                 <p className="service-card__description">{service.description}</p>
-                <div className="service-card__beam" />
               </motion.div>
             )
           })}
