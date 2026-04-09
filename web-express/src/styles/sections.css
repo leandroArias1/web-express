@@ -349,6 +349,17 @@
    RESPONSIVE
    ============================================ */
 
+@media (max-width: 1024px) {
+  .services__grid,
+  .why-us__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .services__grid,
   .portfolio__grid,
@@ -363,5 +374,32 @@
 
   .why-us__cta {
     padding: var(--space-md);
+  }
+
+  .portfolio-card__content,
+  .service-card,
+  .feature-card {
+    text-align: left;
+  }
+
+  .portfolio-card__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .service-card__icon,
+  .feature-card__icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .feature-card__stat {
+    font-size: 2rem;
   }
 }
